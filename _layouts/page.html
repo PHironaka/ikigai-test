@@ -1,0 +1,116 @@
+---
+layout: default
+---
+
+<article class="page-content">
+
+{% if page.title == 'Gallery' %}
+
+ <div class="page-content__gallery">
+<h1> {{page.header}} </h1>
+
+
+<h2> Food </h2>
+{% for image in page.image %}
+ <div class="photo">
+    <div class="lightbox-gallery">
+<img src="{{ image }}">
+</div>
+</div>
+{% endfor %}
+
+
+<h2> Interior </h2>
+{% for space-asset in page.space-asset %}
+ 
+
+
+ <div class="photo">
+    <div class="lightbox-gallery">
+<img src="{{ space-asset }}">
+</div>
+</div>
+
+{% endfor %}
+
+</div>
+{% endif %}
+
+ {% if page.title == 'Menu' %}
+  <div class="page-content__menu">
+
+  <h1>Menu</h1>
+
+ <h2> Snacks </h2>
+{% for menu in site.menu %}
+ {% if menu.item == 'snack' %}
+<div class="item">
+<h3>{{menu.title}} <span> {{menu.price}} </span></h3>
+<p> {{menu.content}} </p>
+</div>
+{% endif %}
+{% endfor %}
+
+
+ <h2> Cold Plates </h2>
+{% for menu in site.menu %}
+ {% if menu.item == 'cold' %}
+<div class="item">
+<h3>{{menu.title}} <span> {{menu.price}} </span></h3>
+<p> {{menu.content}} </p>
+</div>
+{% endif %}
+{% endfor %}
+
+<h2> Warm Plates </h2>
+{% for menu in site.menu %}
+ {% if menu.item == 'warm' %}
+<div class="item">
+<h3>{{menu.title}} <span> {{menu.price}} </span></h3>
+<p> {{menu.content}} </p>
+</div>
+{% endif %}
+{% endfor %}
+
+
+<h2> Cocktails </h2>
+{% for menu in site.menu %}
+ {% if menu.item == 'cocktail' %}
+<div class="item">
+<h3>{{menu.title}} <span> {{menu.price}} </span></h3>
+<p> {{menu.content}} </p>
+</div>
+{% endif %}
+{% endfor %}
+
+
+<h2> Sakes </h2>
+{% for menu in site.menu %}
+ {% if menu.item == 'sake' %}
+<div class="item">
+<h3>{{menu.title}} <span> {{menu.price}} </span></h3>
+<p> {{menu.content}} </p>
+</div>
+{% endif %}
+{% endfor %}
+
+
+
+<h2> Beer </h2>
+{% for menu in site.menu %}
+ {% if menu.item == 'beer' %}
+<div class="item">
+<h3>{{menu.title}} <span> {{menu.price}} </span></h3>
+<p> {{menu.content}} </p>
+</div>
+{% endif %}
+{% endfor %}
+   {% endif %}
+
+  </div>
+
+
+
+
+
+</article>

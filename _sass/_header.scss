@@ -1,0 +1,40 @@
+/**
+ * Site header
+ */
+.site-header {
+
+    min-height: 56px;
+    // Positioning context for the mobile navigation icon
+    position: relative;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 1.32em;
+    line-height: 56px;
+    margin-bottom: 0;
+
+    &:hover {
+      color: black;
+    }
+}
+
+.site-nav {
+    float: right;
+    line-height: 56px;
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the last one
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+
+}

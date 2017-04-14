@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div class="page-content">
+      <div class="wrapper">
+        {% include header.html %}
+
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+     $('.wrapper').fadeIn(1000);
+ });
+
+    </script>
+
+
+
+  </body>
+</html>
